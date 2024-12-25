@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 function Counter() {
 
@@ -8,12 +8,18 @@ function Counter() {
          setCounter(counter+1)
     }
     const decrease = () => {
-          setCounter(counter-1)
+          setCounter(counter-1);
     }
     const reset = () => {
         setCounter(0)
     }
 
+    useEffect(() => {
+      console.log("Güncel counter değeri: ", counter)
+      if (counter < 0 ){
+        alert("Negatif sayılara ulaştınız")
+      }
+    }, [counter])
   return (
     <div>
         <h1>sayaç:{counter}</h1>
