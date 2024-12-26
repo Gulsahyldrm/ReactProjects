@@ -2,9 +2,7 @@ import Creator from './components/Creator';
 function App() {
   return (
     <div className="App">
-      <Creator>
-
-      </Creator>
+      <Creator/>
     </div>
   );
 }
