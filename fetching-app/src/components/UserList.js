@@ -15,9 +15,7 @@ function UserList({ setActiveUserId }) {
     <div>
       <h2>Kullanıcılar</h2>
       {loading && <div>yükleniyor...</div>}
-
       <ul className='user-list'>
-        {setActiveUserId}
         {users.map((user) => (
           <li key={user.id} onClick={() => setActiveUserId(user.id)}>
             {user.name}
